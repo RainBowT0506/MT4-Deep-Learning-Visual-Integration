@@ -44,7 +44,8 @@ def process_and_write_response(self, msg):
     test_Data = pd.DataFrame.from_dict(request, orient='index')
 
     # Reshape，將裡面的屬性改成當時訓練模型的矩陣一樣的屬性
-    cu = test_Data.as_matrix().reshape(1, 7)
+    cu = test_Data.values.reshape(1, 7)
+
     # print(cu)
 
     # 計算結果
