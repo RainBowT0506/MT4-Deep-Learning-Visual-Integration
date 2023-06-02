@@ -162,7 +162,7 @@ class MyHandler(socketserver.StreamRequestHandler):
                     network_input_size = 227
 
                     # Get the input size of the model
-                    with tf.Session() as sess:
+                    with tf.compat.v1.Session() as sess:
                         input_tensor_shape = sess.graph.get_tensor_by_name('Placeholder:0').shape.as_list()
                     network_input_size = input_tensor_shape[1]
 
@@ -173,7 +173,7 @@ class MyHandler(socketserver.StreamRequestHandler):
                     output_layer = 'loss:0'
                     input_node = 'Placeholder:0'
 
-                    with tf.Session() as sess:
+                    with tf.compat.v1.Session() as sess:
                         try:
                             prob_tensor = sess.graph.get_tensor_by_name(output_layer)
                             predictions, = sess.run(prob_tensor, {input_node: [augmented_image]})
