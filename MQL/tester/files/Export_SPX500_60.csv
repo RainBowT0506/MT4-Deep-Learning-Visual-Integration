@@ -1,0 +1,2 @@
+Symbol,Date,DayOfWeek,DayOfYear,Open,High,Low,Close,MacdCurrent,MacdPrevious,SignalCurrent,SignalPrevious,MaCurrent,MaPrevious,
+SPX500,2023.04.30 23:01,0,120,1990.38,1991.85,1988.40,1989.07,0.25,0.22,-0.35,-0.62,1988.84,1988.79,
